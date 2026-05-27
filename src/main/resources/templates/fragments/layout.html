@@ -3,7 +3,7 @@
 <html xmlns:th="http://www.thymeleaf.org"
       th:fragment="pagina(titel, inhoud)">
 <head>
-    <title th:text="${titel}">NGO Anderlecht</title>
+    <th:block th:replace="${titel}"/>   <!-- ← vervangt de hele title tag -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="flex flex-col min-h-screen bg-gray-50 text-gray-800">
