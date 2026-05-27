@@ -1,12 +1,15 @@
-<!-- templates/new.html -->
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: pagina(~{::title}, ~{::main})}">
+<head>
+    <title th:text="'Nieuw evenement | Anderlecht NGO'">Nieuw evenement | Anderlecht NGO</title>
+</head>
 <body>
-<div th:replace="~{fragments/layout :: pagina('Nieuw evenement', ~{::main})}">
-    <main class="flex flex-col flex-grow items-center mx-auto px-6 py-8">
+<main>
+    <div class="max-w-lg mx-auto px-6 py-8">
         <h1 class="text-2xl font-bold mb-4">Nieuw evenement</h1>
 
-        <form th:action="@{/new}" th:object="${evenement}" method="post" class="space-y-4 max-w-lg">
+        <form th:action="@{/new}" th:object="${evenement}" method="post" class="space-y-4">
 
             <div>
                 <label>Titel</label>
@@ -15,32 +18,32 @@
             </div>
 
             <div>
-                <label>Omschrijving</label>
-                <textarea th:field="*{omschrijving}" class="border w-full p-2 rounded"></textarea>
+                <label for="omschrijving">Omschrijving</label>
+                <textarea th:field="*{omschrijving}" id="omschrijving" class="border w-full p-2 rounded"></textarea>
                 <p th:if="${#fields.hasErrors('omschrijving')}" th:errors="*{omschrijving}" class="text-red-500 text-sm"></p>
             </div>
 
             <div>
-                <label>Tijdstip</label>
-                <input type="datetime-local" th:field="*{tijdstip}" class="border w-full p-2 rounded"/>
+                <label for="date">Tijdstip</label>
+                <input id="date" type="datetime-local" th:field="*{tijdstip}" class="border w-full p-2 rounded"/>
                 <p th:if="${#fields.hasErrors('tijdstip')}" th:errors="*{tijdstip}" class="text-red-500 text-sm"></p>
             </div>
 
             <div>
-                <label>Organisatie</label>
-                <input type="text" th:field="*{organisatie}" class="border w-full p-2 rounded"/>
+                <label for="organisatie">Organisatie</label>
+                <input id="organisatie" type="text" th:field="*{organisatie}" class="border w-full p-2 rounded"/>
                 <p th:if="${#fields.hasErrors('organisatie')}" th:errors="*{organisatie}" class="text-red-500 text-sm"></p>
             </div>
 
             <div>
-                <label>Mail contactpersoon</label>
-                <input type="email" th:field="*{mailContactpersoon}" class="border w-full p-2 rounded"/>
+                <label for="mail_contact">Mail contactpersoon</label>
+                <input id="mail_contact" type="email" th:field="*{mailContactpersoon}" class="border w-full p-2 rounded"/>
                 <p th:if="${#fields.hasErrors('mailContactpersoon')}" th:errors="*{mailContactpersoon}" class="text-red-500 text-sm"></p>
             </div>
 
             <div>
-                <label>Locatie</label>
-                <select th:field="*{locatie}" class="border w-full p-2 rounded">
+                <label for="locatie">Locatie</label>
+                <select id="locatie" th:field="*{locatie}" class="border w-full p-2 rounded">
                     <option value="">-- Kies een locatie --</option>
                     <option th:each="l : ${locaties}"
                             th:value="${l.id}"
@@ -53,7 +56,7 @@
                 Opslaan
             </button>
         </form>
-    </main>
-</div>
+    </div>
+</main>
 </body>
 </html>
