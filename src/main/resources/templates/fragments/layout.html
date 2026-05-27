@@ -1,0 +1,29 @@
+<!-- templates/fragments/layout.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:fragment="pagina(titel, inhoud)">
+<head>
+    <title th:text="${titel}">NGO Anderlecht</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50 text-gray-800">
+
+<!-- Navigatie -->
+<nav class="bg-green-700 text-white px-6 py-4 flex gap-6 items-center">
+    <a href="/" class="font-bold text-lg">NGO Anderlecht</a>
+    <a href="/new" class="hover:underline">Nieuw evenement</a>
+    <a href="/about" class="hover:underline">Over ons</a>
+    <a href="/contact" class="hover:underline">Contact</a>
+</nav>
+
+<!-- Pagina-inhoud -->
+<main class="flex-grow container mx-auto px-6 py-8" th:replace="${inhoud}">
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-200 text-center text-sm py-4 text-gray-500">
+    &copy; 2025 NGO Anderlecht. Alle rechten voorbehouden.
+</footer>
+
+</body>
+</html>
