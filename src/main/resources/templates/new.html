@@ -1,0 +1,59 @@
+<!-- templates/new.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:replace="~{fragments/layout :: pagina('Nieuw evenement', ~{::main})}">
+    <main>
+        <h1 class="text-2xl font-bold mb-4">Nieuw evenement</h1>
+
+        <form th:action="@{/new}" th:object="${evenement}" method="post" class="space-y-4 max-w-lg">
+
+            <div>
+                <label>Titel</label>
+                <input type="text" th:field="*{titel}" class="border w-full p-2 rounded"/>
+                <p th:if="${#fields.hasErrors('titel')}" th:errors="*{titel}" class="text-red-500 text-sm"></p>
+            </div>
+
+            <div>
+                <label>Omschrijving</label>
+                <textarea th:field="*{omschrijving}" class="border w-full p-2 rounded"></textarea>
+                <p th:if="${#fields.hasErrors('omschrijving')}" th:errors="*{omschrijving}" class="text-red-500 text-sm"></p>
+            </div>
+
+            <div>
+                <label>Tijdstip</label>
+                <input type="datetime-local" th:field="*{tijdstip}" class="border w-full p-2 rounded"/>
+                <p th:if="${#fields.hasErrors('tijdstip')}" th:errors="*{tijdstip}" class="text-red-500 text-sm"></p>
+            </div>
+
+            <div>
+                <label>Organisatie</label>
+                <input type="text" th:field="*{organisatie}" class="border w-full p-2 rounded"/>
+                <p th:if="${#fields.hasErrors('organisatie')}" th:errors="*{organisatie}" class="text-red-500 text-sm"></p>
+            </div>
+
+            <div>
+                <label>Mail contactpersoon</label>
+                <input type="email" th:field="*{mailContactpersoon}" class="border w-full p-2 rounded"/>
+                <p th:if="${#fields.hasErrors('mailContactpersoon')}" th:errors="*{mailContactpersoon}" class="text-red-500 text-sm"></p>
+            </div>
+
+            <div>
+                <label>Locatie</label>
+                <select th:field="*{locatie}" class="border w-full p-2 rounded">
+                    <option value="">-- Kies een locatie --</option>
+                    <option th:each="l : ${locaties}"
+                            th:value="${l.id}"
+                            th:text="${l.naam}"></option>
+                </select>
+                <p th:if="${#fields.hasErrors('locatie')}" th:errors="*{locatie}" class="text-red-500 text-sm"></p>
+            </div>
+
+            <button type="submit" class="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800">
+                Opslaan
+            </button>
+        </form>
+    </main>
+</div>
+</body>
+</html>
