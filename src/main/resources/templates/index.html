@@ -1,0 +1,36 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:replace="~{fragments/layout :: pagina('Index', ~{::main})}">
+    <main>
+        <h1 class="text-2xl font-bold mb-4">Evenementen</h1>
+
+        <table class="w-full border text-left">
+            <thead class="bg-green-700 text-white">
+            <tr>
+                <th class="p-2">Titel</th>
+                <th class="p-2">Organisatie</th>
+                <th class="p-2"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="e : ${evenementen}" class="border-b hover:bg-gray-100">
+                <td class="p-2" th:text="${e.titel}"></td>
+                <td class="p-2" th:text="${e.organisatie}"></td>
+                <td class="p-2">
+                    <a th:href="@{/detail/{id}(id=${e.id})}"
+                       class="text-green-700 hover:underline">Details</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <a href="/new"
+           class="mt-4 inline-block bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800">
+            + Nieuw evenement
+        </a>
+    </main>
+</div>
+</body>
+</html>
