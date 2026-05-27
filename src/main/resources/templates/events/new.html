@@ -3,7 +3,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
 <div th:replace="~{fragments/layout :: pagina('Nieuw evenement', ~{::main})}">
-    <main>
+    <main class="flex flex-col flex-grow items-center mx-auto px-6 py-8">
         <h1 class="text-2xl font-bold mb-4">Nieuw evenement</h1>
 
         <form th:action="@{/new}" th:object="${evenement}" method="post" class="space-y-4 max-w-lg">

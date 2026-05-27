@@ -33,7 +33,7 @@ public class EvenementController {
     public String nieuwFormulier(Model model) {
         model.addAttribute("evenement", new Evenement());
         model.addAttribute("locaties", locatieService.getAlleLocaties());
-        return "new";     // → templates/new.html
+        return "events/new";     // → templates/new.html
     }
 
     // Formulier versturen
@@ -44,7 +44,7 @@ public class EvenementController {
         if (result.hasErrors()) {
             // Validatie mislukt → formulier opnieuw tonen
             model.addAttribute("locaties", locatieService.getAlleLocaties());
-            return "new";
+            return "events/new";
         }
         evenementService.opslaan(evenement);
         return "redirect:/";  // Terug naar index
@@ -54,7 +54,7 @@ public class EvenementController {
     @GetMapping("/detail/{id}")
     public String detail(@PathVariable Long id, Model model) {
         model.addAttribute("evenement", evenementService.getById(id));
-        return "detail";  // → templates/detail.html
+        return "events/detail";  // → templates/detail.html
     }
 
     // About en contact
