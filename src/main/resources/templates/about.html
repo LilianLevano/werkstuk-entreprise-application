@@ -10,40 +10,170 @@
 
 <main class="flex-grow container mx-auto px-6 py-8 max-w-3xl">
 
-    <h1 class="text-3xl font-bold mb-8">Over ons</h1>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
-    <!-- Beschrijving -->
-    <section class="bg-white rounded shadow p-6 mb-6">
-        <h2 class="text-xl font-semibold mb-3">Wie zijn wij?</h2>
-        <p class="text-gray-600 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </p>
-    </section>
+        <!-- Page header -->
+        <div class="mb-10 text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
+                <svg class="w-8 h-8 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900">Over Anderlecht Gemeenschap NGO</h1>
+            <p class="mt-2 text-gray-500 max-w-xl mx-auto">
+                Wij bouwen aan een sterk, inclusief en solidair Anderlecht waar iedereen meetelt.
+            </p>
+        </div>
 
-    <!-- Adres -->
-    <section class="bg-white rounded shadow p-6 mb-6">
-        <h2 class="text-xl font-semibold mb-3">Adres</h2>
-        <p class="text-gray-600">Quai des Usines 6</p>
-        <p class="text-gray-600">1000 Brussel</p>
-    </section>
+        <!-- Content grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-    <!-- Contactgegevens -->
-    <section class="bg-white rounded shadow p-6">
-        <h2 class="text-xl font-semibold mb-3">Contact</h2>
-        <p class="text-gray-600">
-            <span class="font-medium">E-mail:</span> info@ngo-anderlecht.be
-        </p>
-        <p class="text-gray-600">
-            <span class="font-medium">Telefoon:</span> +32 2 123 45 67
-        </p>
-        <p class="text-gray-600 mt-3">
-            Heb je een vraag? Stuur ons een bericht via de
-            <a href="/contact" class="text-green-700 hover:underline">contactpagina</a>.
-        </p>
-    </section>
+            <!-- Main description -->
+            <div class="lg:col-span-2 space-y-6">
+
+                <div class="card p-6">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <span class="w-1 h-6 bg-green-500 rounded-full block"></span>
+                        Onze Missie
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Anderlecht Gemeenschap NGO is een non-profitorganisatie die zich al meer dan vijftien jaar
+                        inzet voor gemeenschapsopbouw en hulp aan mensen die het minder breed hebben in en rond
+                        Anderlecht. Wij geloven dat een sterke samenleving begint bij verbinding tussen mensen.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                        anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                        accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore
+                        veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    </p>
+                </div>
+
+                <!-- Values -->
+                <div class="card p-6">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <span class="w-1 h-6 bg-green-500 rounded-full block"></span>
+                        Onze Waarden
+                    </h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex gap-3 p-3 bg-green-50 rounded-lg">
+                            <span class="text-2xl">🤝</span>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Solidariteit</h3>
+                                <p class="text-sm text-gray-500">Samen staan we sterker dan alleen.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 p-3 bg-blue-50 rounded-lg">
+                            <span class="text-2xl">🌍</span>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Inclusie</h3>
+                                <p class="text-sm text-gray-500">Iedereen is welkom, zonder uitzondering.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 p-3 bg-orange-50 rounded-lg">
+                            <span class="text-2xl">💡</span>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Empowerment</h3>
+                                <p class="text-sm text-gray-500">We helpen mensen hun potentieel te realiseren.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 p-3 bg-purple-50 rounded-lg">
+                            <span class="text-2xl">🌱</span>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Duurzaamheid</h3>
+                                <p class="text-sm text-gray-500">We bouwen aan een betere toekomst.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Sidebar: contact info -->
+            <div class="space-y-6">
+
+                <!-- Address card -->
+                <div class="card p-6">
+                    <h2 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                        Adres
+                    </h2>
+                    <address class="not-italic text-gray-600 space-y-1">
+                        <p class="font-semibold text-gray-800">Anderlecht Gemeenschap NGO</p>
+                        <p>Koolmijnenkaai 30</p>
+                        <p>1080 Molenbeek-Saint-Jean</p>
+                        <p>Brussel, België</p>
+                    </address>
+                </div>
+
+                <!-- Contact details card -->
+                <div class="card p-6">
+                    <h2 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                        Contact
+                    </h2>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start gap-2">
+                            <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <a href="mailto:info@anderlecht-ngo.be"
+                               class="text-green-600 hover:text-green-800 transition-colors">
+                                info@anderlecht-ngo.be
+                            </a>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <span class="text-gray-600">+32 (0)2 555 12 34</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <div class="text-gray-600">
+                                <p>Ma – Vr: 9:00 – 17:00</p>
+                                <p>Za: 10:00 – 13:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA card -->
+                <div class="card p-6 bg-green-700 text-white">
+                    <h2 class="text-lg font-bold mb-2">Neem contact op</h2>
+                    <p class="text-green-200 text-sm mb-4">
+                        Heeft u vragen of wilt u samenwerken? We horen graag van u!
+                    </p>
+                    <a th:href="@{/contact}"
+                       class="block text-center bg-white text-green-700 hover:bg-green-50 font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
+                        Stuur een bericht
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 
 </main>
 
