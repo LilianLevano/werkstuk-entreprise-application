@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Over ons</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50 text-gray-800">
+
+<nav th:replace="~{fragments/layout :: nav}"></nav>
+
+<main class="flex-grow container mx-auto px-6 py-8 max-w-3xl">
+
+    <h1 class="text-3xl font-bold mb-8">Over ons</h1>
+
+    <!-- Beschrijving -->
+    <section class="bg-white rounded shadow p-6 mb-6">
+        <h2 class="text-xl font-semibold mb-3">Wie zijn wij?</h2>
+        <p class="text-gray-600 leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+    </section>
+
+    <!-- Adres -->
+    <section class="bg-white rounded shadow p-6 mb-6">
+        <h2 class="text-xl font-semibold mb-3">Adres</h2>
+        <p class="text-gray-600">Quai des Usines 6</p>
+        <p class="text-gray-600">1000 Brussel</p>
+    </section>
+
+    <!-- Contactgegevens -->
+    <section class="bg-white rounded shadow p-6">
+        <h2 class="text-xl font-semibold mb-3">Contact</h2>
+        <p class="text-gray-600">
+            <span class="font-medium">E-mail:</span> info@ngo-anderlecht.be
+        </p>
+        <p class="text-gray-600">
+            <span class="font-medium">Telefoon:</span> +32 2 123 45 67
+        </p>
+        <p class="text-gray-600 mt-3">
+            Heb je een vraag? Stuur ons een bericht via de
+            <a href="/contact" class="text-green-700 hover:underline">contactpagina</a>.
+        </p>
+    </section>
+
+</main>
+
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+
+</body>
+</html>
