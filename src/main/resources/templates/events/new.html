@@ -43,12 +43,18 @@
 
             <div>
                 <label for="locatie">Locatie</label>
-                <select id="locatie" th:field="*{locatie}" class="border w-full p-2 rounded" required>
-                    <option value="">-- Kies een locatie --</option>
-                    <option th:each="l : ${locaties}"
-                            th:value="${l.id}"
-                            th:text="${l.naam}"></option>
-                </select>
+                <div class="flex gap-2">
+                    <select id="locatie" th:field="*{locatie}" class="border w-full p-2 rounded" required>
+                        <option value="">-- Kies een locatie --</option>
+                        <option th:each="l : ${locaties}"
+                                th:value="${l.id}"
+                                th:text="${l.naam}"></option>
+                    </select>
+                    <a href="/locaties/new"
+                       class="bg-green-700 text-white px-3 py-2 rounded hover:bg-green-800 whitespace-nowrap">
+                        + Nieuwe locatie
+                    </a>
+                </div>
                 <p th:if="${#fields.hasErrors('locatie')}" th:errors="*{locatie}" class="text-red-500 text-sm"></p>
             </div>
 

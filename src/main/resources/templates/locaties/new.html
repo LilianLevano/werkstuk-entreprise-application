@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: pagina(~{::title}, ~{::main})}">
+<head>
+    <title>Nieuwe locatie | Anderlecht NGO</title>
+</head>
+<body>
+<main>
+    <div class="max-w-lg mx-auto px-6 py-8">
+        <h1 class="text-2xl font-bold mb-4">Nieuwe locatie</h1>
+
+        <form th:action="@{/locaties/new}" th:object="${locatie}" method="post" class="space-y-4">
+
+            <div>
+                <label class="block text-sm font-medium mb-1">Naam</label>
+                <input type="text" th:field="*{naam}" class="border w-full p-2 rounded"/>
+                <p th:if="${#fields.hasErrors('naam')}" th:errors="*{naam}" class="text-red-500 text-sm"></p>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium mb-1">Adres</label>
+                <input type="text" th:field="*{adres}" class="border w-full p-2 rounded"/>
+                <p th:if="${#fields.hasErrors('adres')}" th:errors="*{adres}" class="text-red-500 text-sm"></p>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium mb-1">Capaciteit</label>
+                <input type="number" th:field="*{capaciteit}" min="1" class="border w-full p-2 rounded"/>
+                <p th:if="${#fields.hasErrors('capaciteit')}" th:errors="*{capaciteit}" class="text-red-500 text-sm"></p>
+            </div>
+
+            <button type="submit" class="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800">
+                Opslaan
+            </button>
+
+            <a href="/" class="ml-4 text-gray-500 hover:underline">Annuleren</a>
+
+        </form>
+    </div>
+</main>
+</body>
+</html>

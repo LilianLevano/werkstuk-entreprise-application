@@ -1,6 +1,7 @@
 package com.werkstukentrepriseapplication.controller;
 
 import com.werkstukentrepriseapplication.model.Evenement;
+import com.werkstukentrepriseapplication.model.Locatie;
 import com.werkstukentrepriseapplication.services.EvenementService;
 import com.werkstukentrepriseapplication.services.LocatieService;
 import jakarta.validation.Valid;
@@ -19,8 +20,19 @@ public class LocatieController {
         this.locatieService = locatieService;
     }
 
-    @GetMapping("/locatie/new")
-    public String newLocatie() {
-        return "locatie/newLocatie";
+    @GetMapping("/locaties/new")
+    public String newLocatie(Model model) {
+        model.addAttribute("locatie", new Locatie());
+        return "locaties/new";
+    }
+
+    @PostMapping("/locaties/new")
+    public String locatieOpslaan(@Valid Locatie locatie, BindingResult bindingResult, Model model) {
+        if (bindingResult.hasErrors()) {
+            return "locaties/new";
+        }
+
+        locatieService.opslaan(locatie);
+        return "redirect:/";
     }
 }
