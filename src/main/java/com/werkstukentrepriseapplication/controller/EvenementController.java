@@ -31,9 +31,11 @@ public class EvenementController {
     // Formulier openen
     @GetMapping("/new")
     public String nieuwFormulier(Model model) {
-        model.addAttribute("evenement", new Evenement());
+        if (!model.containsAttribute("evenement")) {
+            model.addAttribute("evenement", new Evenement());
+        }
         model.addAttribute("locaties", locatieService.getAlleLocaties());
-        return "events/new";     // → templates/new.html
+        return "events/new";
     }
 
     // Formulier versturen

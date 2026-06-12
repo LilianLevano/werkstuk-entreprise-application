@@ -50,10 +50,10 @@
                                 th:value="${l.id}"
                                 th:text="${l.naam}"></option>
                     </select>
-                    <a href="/locaties/new"
-                       class="bg-green-700 text-white px-3 py-2 rounded hover:bg-green-800 whitespace-nowrap">
+                    <button type="button" onclick="gaNaarNieuweLocatie()"
+                            class="bg-green-700 text-white px-3 py-2 rounded hover:bg-green-800 whitespace-nowrap">
                         + Nieuwe locatie
-                    </a>
+                    </button>
                 </div>
                 <p th:if="${#fields.hasErrors('locatie')}" th:errors="*{locatie}" class="text-red-500 text-sm"></p>
             </div>
@@ -63,6 +63,35 @@
             </button>
         </form>
     </div>
+    <script>
+        function gaNaarNieuweLocatie() {
+            const data = {
+                titel: document.getElementById('titel').value,
+                omschrijving: document.getElementById('omschrijving').value,
+                tijdstip: document.getElementById('date').value,
+                organisatie: document.getElementById('organisatie').value,
+                mailContactpersoon: document.getElementById('mail_contact').value,
+                locatie: document.getElementById('locatie').value,
+            };
+            sessionStorage.setItem('evenementData', JSON.stringify(data));
+            window.location.href = '/locaties/new';
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const saved = sessionStorage.getItem('evenementData');
+            if (saved) {
+                const data = JSON.parse(saved);
+                document.getElementById('titel').value = data.titel || '';
+                document.getElementById('omschrijving').value = data.omschrijving || '';
+                document.getElementById('date').value = data.tijdstip || '';
+                document.getElementById('organisatie').value = data.organisatie || '';
+                document.getElementById('mail_contact').value = data.mailContactpersoon || '';
+                document.getElementById('locatie').value = data.locatie || '';
+                sessionStorage.removeItem('evenementData');
+            }
+        });
+    </script>
 </main>
 </body>
+
 </html>
