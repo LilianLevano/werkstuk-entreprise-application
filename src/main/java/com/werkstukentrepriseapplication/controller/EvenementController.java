@@ -58,10 +58,4 @@ public class EvenementController {
         model.addAttribute("evenement", evenementService.getById(id));
         return "events/detail";  // → templates/detail.html
     }
-
-    // About en contact
-    @GetMapping("/about")
-    public String about() { return "about"; }
-
-
 }
