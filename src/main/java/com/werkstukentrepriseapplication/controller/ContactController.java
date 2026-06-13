@@ -15,6 +15,9 @@ public class ContactController {
         this.mailSender = mailSender;
     }
 
+    @GetMapping("/contact")
+    public String contact() { return "contact"; }
+
     @PostMapping("/contact")
     public String verstuur(@RequestParam String naam,
                            @RequestParam String email,
