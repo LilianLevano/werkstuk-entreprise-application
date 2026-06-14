@@ -57,5 +57,11 @@ public class EvenementController {
     public String detail(@PathVariable Long id, Model model) {
         model.addAttribute("evenement", evenementService.getById(id));
         return "events/detail";  // → templates/detail.html
+
+    }
+    @PostMapping("/evenementen/{id}/delete")
+    public String delete(@PathVariable Long id) {
+        evenementService.deleteById(id);
+        return "redirect:/";
     }
 }

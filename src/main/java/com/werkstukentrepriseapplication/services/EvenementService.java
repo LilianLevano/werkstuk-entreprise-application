@@ -27,4 +27,8 @@ public class EvenementService {
     public void opslaan(Evenement evenement) {
         repository.save(evenement);
     }
+
+    public void deleteById(Long id) {
+        repository.deleteById(id);
+    }
 }
