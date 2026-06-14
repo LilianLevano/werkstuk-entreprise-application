@@ -3,14 +3,6 @@
 
 Een Spring Boot webapplicatie voor het beheren van evenementen van de NGO Anderlecht. Gebruikers kunnen evenementen aanmaken, bekijken en locaties toevoegen via een gebruiksvriendelijke webinterface.
 
----
-
-## Inhoudsopgave
-
-- [Technologieën & Libraries](#technologieën--libraries)
-- [Installatie & uitvoering](#installatie--uitvoering)
-- [Gebruikte tutorials & documentatie](#gebruikte-tutorials--documentatie)
-- [AI-gebruik](#ai-gebruik)
 
 ---
 
@@ -39,19 +31,20 @@ Een Spring Boot webapplicatie voor het beheren van evenementen van de NGO Anderl
 
 - **Java 21+** geïnstalleerd ([download](https://adoptium.net/))
 - **Maven** (of gebruik de meegeleverde `mvnw`)
-- **IntelliJ IDEA** (aanbevolen) of een andere IDE
+- **IntelliJ IDEA** (aanbevolen) of een andere IDE die Spring Boot compatible zijn
 
 ### Stappen
 
 **1. Repository klonen**
 ```bash
-git clone <repository-url>
-cd werkstuk-entreprise-application
+mkdir <naam-directory>
+cd <naam-directory>
+git clone https://github.com/LilianLevano/werkstuk-entreprise-application
 ```
 
 **2. Project uitvoeren**
 
-Via Maven Wrapper (geen Maven-installatie nodig):
+In de terminal van jouw IDE, of direct terminal van OS: 
 ```bash
 # Linux / macOS
 ./mvn spring-boot:run
@@ -77,12 +70,13 @@ De database wordt opgeslagen in `data/ngodb.mv.db`. Om te resetten, verwijder di
 
 ## Gebruikte tutorials & documentatie
 
-| Bron | Onderwerp |
-|---|---|
-| [Spring Boot officiële docs](https://docs.spring.io/spring-boot/docs/current/reference/html/) | Algemene Spring Boot configuratie |
-| [Spring MVC docs](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html) | Controllers, routing, formulieren |
-| [Thymeleaf documentatie](https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html) | Templating, `th:field`, `th:each`, fragmenten |
-| [Tailwind CSS docs](https://tailwindcss.com/docs) | Frontend styling via CDN |
+| Bron                                                                                            | Onderwerp                                                             |
+|-------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
+| [Spring Boot officiële docs](https://docs.spring.io/spring-boot/docs/current/reference/html/)   | Algemene Spring Boot configuratie                                     |
+| [Spring MVC docs](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html) | Controllers, routing, formulieren                                     |
+| [Thymeleaf documentatie](https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html)       | Templating, `th:field`, `th:each`, fragmenten                         |
+| [Tailwind CSS docs](https://tailwindcss.com/docs)                                               | Frontend styling via CDN                                              |
+| AI (Claude) | Fundamentele concepten van Spring Boot + "hoe start ik een project ?" |
 
 
 
